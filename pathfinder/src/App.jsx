@@ -1,11 +1,23 @@
 import React from 'react';
-function App() {
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import About from './views/About';
+import Contact from './views/Contact';
+import Home from './views/Home';
 
+function App() {
   return (
-    <>
-     <h1>PathFinder KE</h1>
-    </>
-  )
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </Router>
+  );
 }
 
-export default App
+export default App;
