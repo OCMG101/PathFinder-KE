@@ -1,7 +1,7 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
+import React from "react";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Container from "@mui/material/Container";
 
 const Footer = () => (
   <Box
@@ -9,10 +9,13 @@ const Footer = () => (
     sx={{
       py: 3,
       px: 2,
-      mt: 'auto',
-      backgroundColor: (theme) =>
-        theme.palette.mode === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
-      textAlign: 'center'
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      width: "100%",
+      backgroundColor: "background.paper",
+      textAlign: "center",
+      zIndex: 1300,
     }}
   >
     <Container maxWidth="md">
